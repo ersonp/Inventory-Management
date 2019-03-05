@@ -1,0 +1,667 @@
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400" rel="stylesheet" type="text/css">
+
+<style>
+    
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+      color: #aca49c;
+      font-size: 0.875em;
+    }
+
+    input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {
+      color: #bbb5af;
+    }
+
+    input::-moz-placeholder, textarea::-moz-placeholder {
+      color: #aca49c;
+      font-size: 0.875em;
+    }
+
+    input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {
+      color: #bbb5af;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #aca49c;
+      font-size: 0.875em;
+    }
+
+    input:focus::placeholder, textarea::focus:placeholder {
+      color: #bbb5af;
+    }
+
+    input::-ms-placeholder, textarea::-ms-placeholder {
+      color: #aca49c;
+      font-size: 0.875em;
+    }
+
+    input:focus::-ms-placeholder, textarea:focus::-ms-placeholder {
+      color: #bbb5af;
+    }
+
+    /* on hover placeholder */
+
+    input:hover::-webkit-input-placeholder, textarea:hover::-webkit-input-placeholder {
+      color: #fff;
+      font-size: 0.875em;
+    }
+
+    input:hover:focus::-webkit-input-placeholder, textarea:hover:focus::-webkit-input-placeholder {
+      color: #cbc6c1;
+    }
+
+    input:hover::-moz-placeholder, textarea:hover::-moz-placeholder {
+      color: #fff;
+      font-size: 0.875em;
+    }
+
+    input:hover:focus::-moz-placeholder, textarea:hover:focus::-moz-placeholder {
+      color: #cbc6c1;
+    }
+
+    input:hover::placeholder, textarea:hover::placeholder {
+      color: #fff;
+      font-size: 0.875em;
+    }
+
+    input:hover:focus::placeholder, textarea:hover:focus::placeholder {
+      color: #cbc6c1;
+    }
+
+    input:hover::placeholder, textarea:hover::placeholder {
+      color: #fff;
+      font-size: 0.875em;
+    }
+
+    input:hover:focus::-ms-placeholder, textarea:hover::focus:-ms-placeholder {
+      color: #cbc6c1;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    .header {
+      position: relative;
+      margin: 20px 0 20px 0;
+      font-size: 2.3em;
+      text-align: center;
+      letter-spacing: 7px;
+      cursor: default
+    }
+
+    #productForm {
+      position: relative;
+      width: 500px;
+      margin: 50px auto 100px auto;
+    }
+
+    #loginForm {
+      position: relative;
+      width: 500px;
+      margin: 50px auto 100px auto;
+    }
+    textarea {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      width: 480px;
+      height: 50px;
+      padding: 0px 15px 0px 15px;
+      
+      background: transparent;
+      outline: none;
+      color: #726659;
+      
+      border: solid 1px #000;
+      border-bottom: none;
+      
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+    }
+    input {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      width: 100%;
+      height: 50px;
+      padding: 0px 15px 0px 15px;
+      
+      background: transparent;
+      outline: none;
+      color: #726659;
+      
+      border: solid 1px #000;
+      /*border-bottom: none;*/
+      
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+    }
+
+    .bill {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      width: 100% !important;
+      height: 50px;
+      padding: 0px 15px 0px 15px !important;
+      
+      background: transparent;
+      outline: none;
+      color: #726659;
+      
+      border: solid 1px #000;
+      /*border-bottom: none;*/
+      
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+    }
+    .bill-color{
+      border: solid 1px #fff !important;
+    }
+    .bill-confirm {
+       width: 100% !important;
+    }
+    .bill-confirm-modal {
+      color: #fff !important;
+      border: solid 1px #fff !important;
+    }
+    .bill-confirm-modal:hover {
+      color: #000 !important;
+      background: #fff;
+      border: solid 1px #fff !important;
+    }
+    .bill-margin {
+      margin: 3px 0px 0px 0px !important;
+    }
+    input:hover {
+      background: #000;
+      color: #fff;
+    }
+    input:hover {
+      background: #000;
+      color: #fff;
+    }
+
+
+    .padding-footer {
+      margin-left: 15px !important;
+      margin-right: 15px !important;
+    }
+    .padding-container-footer {
+      padding: 0px 0px 0px 0px !important;
+    }
+
+    .padding-container-header {
+      padding: 0px 15px 0px 15px !important;
+    }
+
+    .below-border {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      width: 480px;
+      height: 50px;
+      padding: 0px 15px 0px 15px;
+      
+      background: transparent;
+      outline: none;
+      
+      color: #726659;
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      
+      border: solid 1px #000;
+      
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+    }
+
+    .select-css {
+      width: 480px;
+      height: 50px;
+    }
+
+    textarea:hover {
+      background: #000;
+      color: #fff;
+    }
+
+    #submit {
+      width: 100%;
+      
+      padding: 0;
+      margin: -5px 0px 0px 0px;
+      
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      color: #000;
+      
+      outline:none;
+      cursor: pointer;
+      
+      border: solid 1px #000;
+    }
+
+    #submit:hover {
+      color: #fff;
+    }
+    .white-size {
+      font-size: 0.875em !important;
+    }
+    .white {
+      color: #fff;
+      font-family: 'Lato', sans-serif;
+    }
+    .bg-black {
+      background: #000 !important;
+    }
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .capitalize {
+      text-transform: capitalize;
+    }
+
+    .save-buttons {
+      width: 200px;
+      
+      padding: 0;
+      margin: -5px 0px 0px 0px;
+      
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      color: #fff;
+      outline:none;
+      
+      border: solid 1px #fff;
+    }
+
+    .save-buttons:hover {
+      color: #000;
+      background: #fff;
+    }
+
+    .modal-inputs {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      width: 480px;
+      height: 50px;
+      padding: 0px 15px 0px 15px;
+      
+      background: transparent;
+      outline: none;
+      color: #fff;
+      
+      border: solid 1px #fff;
+      border-bottom: none;
+      
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+    }
+
+    .modal-inputs-below {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      width: 480px;
+      height: 50px;
+      padding: 0px 15px 0px 15px;
+      
+      background: transparent;
+      outline: none;
+      color: #fff;
+      
+      border: solid 1px #fff;
+      line-height: 10px;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+    }
+
+    .close-buttons {
+      width: 100px;
+      
+      padding: 0;
+      margin: -5px 0px 0px 0px;
+      
+      font-family: 'Lato', sans-serif;
+      font-size: 0.875em;
+      color: #fff;
+      outline:none;
+      
+      background: #000;
+      /*border: solid 1px #fff;*/
+    }
+
+    .close-buttons:hover {
+      color: #000;
+      background: #fff;
+    }
+
+    .top-padding {
+      padding-top: 10px;
+      padding-bottom: 25px;
+    }
+    meter::-webkit-meter-bar 
+    {
+      background: #fff;
+      border-radius: 0px;
+      border-color: #000;
+      border-style: solid;
+      border-width: 1px;
+      /*padding: 0.1em;*/
+    } /*background color of bar*/
+    meter::-webkit-meter-optimum-value 
+    {
+      background: #000;
+    }
+    .dataTables_length {
+      margin-top: 30px;
+      margin-left: 20px;
+    }
+
+    .delete-button {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.675em;
+      width: 30px;
+      height: 30px;
+      padding: 0px 0px 0px 0px !important;
+      
+      background: transparent;
+      outline: none;
+      color: #000;
+      
+      border: solid 1px #000;
+      
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+    }
+    .details-control {
+      margin: 10px 10px 10px 10px !important;
+    }
+    .delete-button-hover {
+      padding: 0px 0px 0px 0px !important;
+      
+      background: black !important;
+      
+      color: #fff;
+      transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+    }
+
+.has-float-label {
+  display: block;
+  position: relative;
+  top: 3px
+}
+
+.has-float-label label,
+.has-float-label>span {
+  position: absolute;
+  cursor: text;
+  font-size: 0.675em;
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  top: -.7em;
+  left: .75rem;
+  z-index: 3;
+  line-height: 1;
+  padding: 0 2px
+}
+
+.has-float-label label::after,
+.has-float-label>span::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  background: #fff;
+  height: 0.3em;
+  top: 50%;
+  left: -.2em;
+  right: -.2em;
+  z-index: -1
+}
+
+.has-float-label .form-control::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s
+}
+
+.has-float-label .form-control::-moz-placeholder {
+  opacity: 1;
+  transition: all .2s
+}
+
+.has-float-label .form-control:-ms-input-placeholder {
+  opacity: 1;
+  transition: all .2s
+}
+
+.has-float-label .form-control::placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+  opacity: 0
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder {
+  opacity: 0
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
+  opacity: 0
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder {
+  opacity: 0
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+* {
+  font-size: 150%;
+  opacity: .5;
+  top: .3em
+}
+
+.input-group .has-float-label {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.input-group .has-float-label .form-control {
+  width: 100%;
+  border-radius: .25rem
+}
+
+.input-group .has-float-label:not(:last-child),
+.input-group .has-float-label:not(:last-child) .form-control {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0
+}
+
+.input-group .has-float-label:not(:first-child),
+.input-group .has-float-label:not(:first-child) .form-control {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.has-float-label-modal {
+  display: block;
+  position: relative;
+  top: 3px
+}
+
+.has-float-label-modal label,
+.has-float-label-modal>span {
+  position: absolute;
+  cursor: text;
+  font-size: 0.675em;
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  top: -.7em;
+  left: .75rem;
+  z-index: 3;
+  line-height: 1;
+  padding: 0 2px
+}
+
+.has-float-label-modal label::after,
+.has-float-label-modal>span::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  background: #000;
+  height: 6px;
+  top: 50%;
+  left: -.2em;
+  right: -.2em;
+  z-index: -1
+}
+
+.has-float-label-modal .form-control-modal::-webkit-input-placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s
+}
+
+.has-float-label-modal .form-control-modal::-moz-placeholder {
+  opacity: 1;
+  transition: all .2s
+}
+
+.has-float-label-modal .form-control-modal:-ms-input-placeholder {
+  opacity: 1;
+  transition: all .2s
+}
+
+.has-float-label-modal .form-control-modal::placeholder {
+  opacity: 1;
+  -webkit-transition: all .2s;
+  transition: all .2s
+}
+
+.has-float-label-modal .form-control-modal:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+  opacity: 0
+}
+
+.has-float-label-modal .form-control-modal:placeholder-shown:not(:focus)::-moz-placeholder {
+  opacity: 0
+}
+
+.has-float-label-modal .form-control-modal:placeholder-shown:not(:focus):-ms-input-placeholder {
+  opacity: 0
+}
+
+.has-float-label-modal .form-control-modal:placeholder-shown:not(:focus)::placeholder {
+  opacity: 0
+}
+
+.has-float-label-modal .form-control-modal:placeholder-shown:not(:focus)+* {
+  font-size: 150%;
+  opacity: .5;
+  top: .3em
+}
+
+.input-group .has-float-label-modal {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.input-group .has-float-label-modal .form-control-modal {
+  width: 100%;
+  border-radius: .25rem
+}
+
+.input-group .has-float-label-modal:not(:last-child),
+.input-group .has-float-label-modal:not(:last-child) .form-control-modal {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0
+}
+
+.input-group .has-float-label-modal:not(:first-child),
+.input-group .has-float-label-modal:not(:first-child) .form-control-modal {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0
+}
+.second-table {
+  background-color: black !important;
+  color : white !important;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  cell-border : 0px solid #fff;
+  row-border : 0px solid #fff;
+}
+table.dataTable.row-border tbody tr:first-child td{
+
+  border-top: 1px solid #fff !important;
+}
+table.dataTable#confirmBillTable {
+    border-bottom: 1px solid #fff !important;
+}
+</style>
